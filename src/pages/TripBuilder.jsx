@@ -212,9 +212,8 @@ export default function TripBuilder() {
                     </div>
                   </div>
                   <div className="text-sm text-slate-500 mb-4">
-                    {format(new Date(stop.startDate), 'MMM dd')} — {format(new Date(stop.endDate), 'MMM dd')}
+                    {stop.startDate ? format(new Date(stop.startDate), 'MMM dd') : 'TBD'} — {stop.endDate ? format(new Date(stop.endDate), 'MMM dd') : 'TBD'}
                   </div>
-                  
                   <div className="flex gap-2">
                     <button 
                       onClick={() => setShowActivitySearch(stop.id)}
