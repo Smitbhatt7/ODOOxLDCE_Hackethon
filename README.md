@@ -2,7 +2,7 @@
 
 GlobeTrotter is a complete, visually spectacular, and fully interactive local prototype designed for modern travelers. It enables users to discover destinations, build detailed day-by-day itineraries, track budgets, visualize their journeys on a calendar, and share their travel plans with a vibrant community.
 
-**Live Demo**: [Local Prototype - Run Locally]
+**Live Demo**:  [Local Prototype - Run Locally]
 
 ---
 
