@@ -35,7 +35,7 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 * \src/data/\ - Seeded mock data.
 
 
-Globe Trotter-Contributors
+## Globe Trotter-Contributors:
 * **Vansh Trivedi**
 * **Parva Vhora**
 * **Smit Bhatt**
