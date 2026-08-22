@@ -13,21 +13,30 @@ export default function Login() {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
+  const [error, setError] = useState('');
   
   const { login } = useAppContext();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      login(email);
-      navigate('/dashboard');
+  const handleLoginSuccess = (loggedUser) => {
+    if (loggedUser.role === 'admin') {
+      navigate('/admin');
+    } else {
+      navigate('/user/dashboard');
     }
   };
 
-  const handleDemo = () => {
-    login('demo@globetrotter.app');
-    navigate('/dashboard');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (email && password) {
+      try {
+        const loggedUser = await login(email, password);
+        handleLoginSuccess(loggedUser);
+      } catch (err) {
+        setError(err.message || 'Invalid email or password');
+      }
+    }
   };
 
   return (
@@ -60,6 +69,12 @@ export default function Login() {
               {isLogin ? 'Please enter your details to sign in.' : 'Join GlobeTrotter to start planning your journeys.'}
             </p>
           </div>
+
+          {error && (
+            <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm font-medium text-center">
+              {error}
+            </div>
+          )}
 
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-4">
@@ -166,13 +181,10 @@ export default function Login() {
               >
                 {isLogin ? 'Sign in' : 'Register'}
               </button>
-              <button 
-                type="button" 
-                onClick={handleDemo}
-                className="w-full flex justify-center py-3 px-4 border border-slate-200 rounded-xl shadow-sm text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors"
-              >
-                Continue as Demo User
-              </button>
+              <div className="text-xs text-slate-500 text-center pt-2 space-y-1">
+                <p><strong>Admin:</strong> admin@test.com / Admin123!</p>
+                <p><strong>User:</strong> user@test.com / User123!</p>
+              </div>
             </div>
           </form>
 
