@@ -19,6 +19,17 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
+const AdminRoute = ({ children }) => {
+  const { user } = useAppContext();
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+  if (user.role !== 'admin') {
+    return <Navigate to="/dashboard" replace />;
+  }
+  return children;
+};
+
 const Layout = ({ children }) => {
   const { user } = useAppContext();
   return (
@@ -43,7 +54,7 @@ function App() {
             <Route path="/community" element={<ProtectedRoute><CommunityHub /></ProtectedRoute>} />
             <Route path="/share/:id" element={<PublicTrip />} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+            <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </Layout>

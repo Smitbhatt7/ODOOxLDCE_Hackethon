@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: 'Dashboard', path: '/dashboard', icon: <Compass className="w-5 h-5" /> },
     { name: 'My Trips', path: '/trips', icon: <Map className="w-5 h-5" /> },
     { name: 'Community', path: '/community', icon: <Compass className="w-5 h-5" /> },
-    { name: 'Admin', path: '/admin', icon: <BarChart2 className="w-5 h-5" /> },
+    ...(user?.role === 'admin' ? [{ name: 'Admin', path: '/admin', icon: <BarChart2 className="w-5 h-5" /> }] : []),
     { name: 'Profile', path: '/profile', icon: <User className="w-5 h-5" /> },
   ];
 
