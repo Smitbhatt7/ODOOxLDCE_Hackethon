@@ -33,9 +33,9 @@ const AdminRoute = ({ children }) => {
 const Layout = ({ children }) => {
   const { user } = useAppContext();
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 transition-colors">
       {user && <Navbar />}
-      <main className="flex-1 flex flex-col">{children}</main>
+      <main className="flex-1 flex flex-col text-slate-900 dark:text-slate-100">{children}</main>
     </div>
   );
 };

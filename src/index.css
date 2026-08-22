@@ -38,3 +38,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+@media print {
+  header, button {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAppContext } from '../store/appStore';
-import { ArrowLeft, Share2, Calendar, Wallet, Search, Plus, MapPin, X, Trash2, ChevronUp, ChevronDown, Clock, Tag } from 'lucide-react';
+import { ArrowLeft, Share2, Calendar, Wallet, Search, Plus, MapPin, X, Trash2, ChevronUp, ChevronDown, Clock, Tag, Sparkles, Loader2, Printer } from 'lucide-react';
 import { format, differenceInDays, addDays, parseISO } from 'date-fns';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
@@ -18,11 +18,39 @@ export default function TripBuilder() {
   const [showActivitySearch, setShowActivitySearch] = useState(null); // cityId
   const [activitySearchQuery, setActivitySearchQuery] = useState('');
   const [activityCategoryFilter, setActivityCategoryFilter] = useState('All');
+  const [isAIGenerating, setIsAIGenerating] = useState(false);
 
   useEffect(() => {
     const t = trips.find(t => t.id === id);
     if (t) setTrip(t);
   }, [id, trips]);
+
+  const handleAIGenerate = () => {
+    setIsAIGenerating(true);
+    setTimeout(() => {
+      const generatedStops = [
+        {
+          id: Date.now().toString(),
+          cityId: cities[0].id, // Paris
+          activities: [
+            { ...activities.find(a => a.id === 'a1'), day: 1 },
+            { ...activities.find(a => a.id === 'a2'), day: 2 }
+          ]
+        },
+        {
+          id: (Date.now() + 1).toString(),
+          cityId: cities[2].id, // Rome
+          activities: [
+            { ...activities.find(a => a.id === 'a7'), day: 1 }
+          ]
+        }
+      ];
+      const updatedTrip = { ...trip, stops: generatedStops };
+      setTrip(updatedTrip);
+      updateTrip(updatedTrip);
+      setIsAIGenerating(false);
+    }, 2000);
+  };
 
   if (!trip) return <div className="p-10">Loading trip...</div>;
 
@@ -144,6 +172,9 @@ export default function TripBuilder() {
         </div>
         
         <div className="flex items-center gap-2">
+          <button onClick={() => window.print()} className="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-medium transition-colors">
+            <Printer className="w-4 h-4" /> Print PDF
+          </button>
           <Link to={`/share/${trip.id}`} target="_blank" className="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-medium transition-colors">
             <Share2 className="w-4 h-4" /> Share
           </Link>
@@ -232,11 +263,31 @@ export default function TripBuilder() {
             {activeTab === 'itinerary' && (
               <div className="max-w-4xl mx-auto">
                 {trip.stops.length === 0 ? (
-                  <div className="text-center py-20">
-                    <MapPin className="w-16 h-16 text-slate-300 mx-auto mb-4" />
+                  <div className="flex-1 flex flex-col items-center justify-center p-12 bg-white rounded-3xl border border-slate-200 border-dashed">
+                    <MapPin className="w-16 h-16 text-slate-300 mb-4" />
                     <h3 className="text-xl font-bold text-slate-900 mb-2">No destinations yet</h3>
-                    <p className="text-slate-500 mb-6">Start building your itinerary by adding a city.</p>
-                    <button onClick={() => setShowCitySearch(true)} className="bg-brand-600 text-white px-6 py-3 rounded-full font-medium hover:bg-brand-700">Add Destination</button>
+                    <p className="text-slate-500 mb-6 max-w-md mx-auto">
+                      Start building your itinerary by adding cities you want to visit on this trip.
+                    </p>
+                    <div className="flex gap-4">
+                      <button 
+                        onClick={() => setShowCitySearch(true)}
+                        className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-medium transition-colors"
+                      >
+                        Add First Destination
+                      </button>
+                      <button 
+                        onClick={handleAIGenerate}
+                        disabled={isAIGenerating}
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                      >
+                        {isAIGenerating ? (
+                          <><Loader2 className="w-5 h-5 animate-spin" /> Generating...</>
+                        ) : (
+                          <><Sparkles className="w-5 h-5" /> Auto-Generate with AI</>
+                        )}
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-12">
