@@ -35,28 +35,6 @@ pm run build to generate the optimized static assets in the dist/ directory, whi
 
 ---
 
-## 🔧 Local Quick Start Guide
-
-### 1. Prerequisites
-Ensure you have Node.js installed.
-
-### 2. Install Dependencies
-\\\ash
-npm install
-\\\
-
-### 3. Start Development Server
-\\\ash
-npm run dev
-\\\
-
-### 4. Login
-Open http://localhost:5173/ in your browser. 
-* **Register/Login** with any mock credentials
-* **Or** simply click **"Continue as Demo User"**
-
----
-
 ## 📂 Project Architecture
 
 * \src/App.jsx\ - Core routing and layout wrappers.
