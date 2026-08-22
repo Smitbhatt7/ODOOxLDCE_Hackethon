@@ -37,8 +37,28 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem('globetrotter_trips', JSON.stringify(trips));
   }, [trips]);
 
-  const login = (email) => {
-    setUser({ email, name: email.split('@')[0] || 'Demo User', profileImage: 'https://i.pravatar.cc/150?u=' + email });
+  const login = async (email, password) => {
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Login failed');
+      }
+
+      setUser(data);
+      localStorage.setItem('globetrotter_user', JSON.stringify(data));
+      return data;
+    } catch (err) {
+      throw err;
+    }
   };
   
   const logout = () => {
