@@ -30,9 +30,9 @@ export default function MyTrips() {
     setActiveMenu(null);
   };
 
-  const ongoingTrips = trips.filter(t => new Date(t.startDate) <= new Date() && new Date(t.endDate) >= new Date(new Date().setHours(0, 0, 0, 0)));
+  const ongoingTrips = trips.filter(t => new Date(t.startDate) <= new Date() && new Date(t.endDate) >= new Date(new Date().setHours(0,0,0,0)));
   const upcomingTrips = trips.filter(t => new Date(t.startDate) > new Date());
-  const completedTrips = trips.filter(t => new Date(t.endDate) < new Date(new Date().setHours(0, 0, 0, 0)));
+  const completedTrips = trips.filter(t => new Date(t.endDate) < new Date(new Date().setHours(0,0,0,0)));
 
   const renderTripGroup = (title, groupTrips) => {
     if (groupTrips.length === 0) return null;
@@ -42,15 +42,15 @@ export default function MyTrips() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {groupTrips.map(trip => {
             const days = Math.max(1, differenceInDays(new Date(trip.endDate), new Date(trip.startDate)));
-
+            
             return (
               <Link key={trip.id} to={`/trips/${trip.id}/builder`} className="group block relative">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 transition-all hover:shadow-lg flex flex-col h-full">
                   <div className="aspect-video relative overflow-hidden">
-                    <img src={trip.coverImage || 'https://picsum.photos/seed/trip/800/600'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={trip.coverImage || 'https://images.unsplash.com/photo-1488646953014-c8c3629fca1f'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-
-                    <button
+                    
+                    <button 
                       onClick={(e) => toggleMenu(trip.id, e)}
                       className="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors z-20"
                     >
@@ -80,13 +80,13 @@ export default function MyTrips() {
                       <p className="text-sm text-slate-200">{format(new Date(trip.startDate), 'MMM dd')} — {format(new Date(trip.endDate), 'MMM dd, yyyy')}</p>
                     </div>
                   </div>
-
+                  
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div className="flex items-center gap-4 text-sm text-slate-500 mb-4">
                       <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full"><MapPin className="w-4 h-4 text-brand-500" /> {trip.stops?.length || 0} cities</span>
                       <span className="flex items-center gap-1.5 bg-slate-50 px-3 py-1 rounded-full"><Calendar className="w-4 h-4 text-brand-500" /> {days} days</span>
                     </div>
-
+                    
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                       <span className="text-brand-600 font-medium text-sm flex items-center gap-1 hover:text-brand-700">Continue Planning &rarr;</span>
                     </div>

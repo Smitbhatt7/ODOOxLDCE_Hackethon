@@ -5,8 +5,8 @@ import { format, differenceInDays } from 'date-fns';
 
 export default function Dashboard() {
   const { user, trips, cities } = useAppContext();
-
-  const upcomingTrips = trips.filter(t => new Date(t.startDate) >= new Date(new Date().setHours(0, 0, 0, 0))).slice(0, 2);
+  
+  const upcomingTrips = trips.filter(t => new Date(t.startDate) >= new Date(new Date().setHours(0,0,0,0))).slice(0, 2);
   const recommendedCities = cities.slice(0, 4);
 
   // Rough estimation logic for dashboard
@@ -33,14 +33,14 @@ export default function Dashboard() {
                 View all <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-
+            
             {upcomingTrips.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {upcomingTrips.map(trip => (
                   <Link key={trip.id} to={`/trips/${trip.id}/builder`} className="group block">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 transition-all hover:shadow-md">
                       <div className="aspect-[4/3] relative overflow-hidden">
-                        <img src={trip.coverImage || 'https://picsum.photos/seed/trip/800/600'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <img src={trip.coverImage || 'https://images.unsplash.com/photo-1488646953014-c8c3629fca1f'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
                         <div className="absolute bottom-4 left-4 right-4 text-white">
                           <h3 className="text-xl font-bold mb-1">{trip.name}</h3>
@@ -96,7 +96,7 @@ export default function Dashboard() {
           <div className="bg-slate-900 text-white rounded-3xl p-6 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500 rounded-full blur-3xl opacity-20 -mr-10 -mt-10"></div>
             <h2 className="text-lg font-medium opacity-90 mb-6 flex items-center gap-2"><Wallet className="w-5 h-5" /> Budget Snapshot</h2>
-
+            
             {nextTrip ? (
               <div className="space-y-6 relative z-10">
                 <div>
@@ -117,9 +117,9 @@ export default function Dashboard() {
                 </div>
               </div>
             ) : (
-              <div className="py-4 text-center relative z-10">
-                <p className="opacity-80">Plan a trip to see your budget insights here.</p>
-              </div>
+               <div className="py-4 text-center relative z-10">
+                  <p className="opacity-80">Plan a trip to see your budget insights here.</p>
+               </div>
             )}
           </div>
 

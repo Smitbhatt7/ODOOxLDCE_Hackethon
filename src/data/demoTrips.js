@@ -9,7 +9,7 @@ export const demoTrips = [
     description: 'A classic tour through some of Europe\'s most iconic cities.',
     startDate: format(addDays(today, 30), 'yyyy-MM-dd'),
     endDate: format(addDays(today, 37), 'yyyy-MM-dd'),
-    coverImage: 'https://picsum.photos/seed/europe/800/600',
+    coverImage: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80',
     stops: [
       {
         id: 's1',

@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 
 export default function CommunityHub() {
   const { trips } = useAppContext();
-
+  
   // Fake community feed using our demo trips but acting like they belong to others
   const feed = [
     { ...trips[0], author: 'Sarah Jenkins', likes: 124, comments: 12 },
@@ -13,7 +13,7 @@ export default function CommunityHub() {
       id: 'mock-comm-1',
       name: 'Backpacking Southeast Asia',
       author: 'David Chen',
-      coverImage: 'https://picsum.photos/seed/asia/800/600',
+      coverImage: 'https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80',
       stops: [1, 2, 3, 4],
       startDate: '2024-10-01',
       endDate: '2024-10-21',
@@ -24,7 +24,7 @@ export default function CommunityHub() {
       id: 'mock-comm-2',
       name: 'Winter in the Alps',
       author: 'Emma Wilson',
-      coverImage: 'https://picsum.photos/seed/alps/800/600',
+      coverImage: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80',
       stops: [1, 2],
       startDate: '2024-12-15',
       endDate: '2024-12-25',
@@ -45,9 +45,9 @@ export default function CommunityHub() {
       <div className="bg-white p-4 rounded-full border border-slate-200 shadow-sm flex gap-4 mb-10">
         <div className="relative flex-1">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
-          <input
-            type="text"
-            placeholder="Search community trips..."
+          <input 
+            type="text" 
+            placeholder="Search community trips..." 
             className="w-full pl-12 pr-4 py-3 bg-slate-50 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-500 transition-shadow"
           />
         </div>
@@ -68,9 +68,9 @@ export default function CommunityHub() {
                 <p className="text-sm text-slate-500">Shared a public itinerary</p>
               </div>
             </div>
-
+            
             <div className="h-72 relative group cursor-pointer">
-              <img src={trip.coverImage || 'https://picsum.photos/seed/trip/800/600'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src={trip.coverImage || 'https://images.unsplash.com/photo-1488646953014-c8c3629fca1f'} alt={trip.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <h2 className="text-3xl font-display font-bold mb-2">{trip.name}</h2>
@@ -93,7 +93,7 @@ export default function CommunityHub() {
                   <Share2 className="w-5 h-5" /> Share
                 </button>
               </div>
-
+              
               <Link to={`/share/${trip.id}`} className="px-6 py-2 bg-white border border-slate-200 rounded-full font-medium text-slate-700 hover:border-brand-300 transition-colors">
                 View Itinerary
               </Link>

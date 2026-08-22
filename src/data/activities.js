@@ -8,7 +8,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2,
     cost: 2500,
-    image: 'https://picsum.photos/seed/eiffel/800/600'
+    image: 'https://images.unsplash.com/photo-1543305113-64a856be22c8?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a2',
@@ -18,7 +18,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 1800,
-    image: 'https://picsum.photos/seed/louvre/800/600'
+    image: 'https://images.unsplash.com/photo-1574962294475-7bc6eb9be4e3?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a3',
@@ -28,7 +28,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1500,
-    image: 'https://picsum.photos/seed/seine/800/600'
+    image: 'https://images.unsplash.com/photo-1522093537031-3ee2ce196dff?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a4',
@@ -38,7 +38,7 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3500,
-    image: 'https://picsum.photos/seed/wine/800/600'
+    image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80'
   },
   // Amsterdam Activities
   {
@@ -49,7 +49,7 @@ export const activities = [
     category: 'Culture',
     duration: 2,
     cost: 2000,
-    image: 'https://picsum.photos/seed/vangogh/800/600'
+    image: 'https://images.unsplash.com/photo-1577901170792-7104b2cf607d?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a6',
@@ -59,7 +59,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1600,
-    image: 'https://picsum.photos/seed/canal/800/600'
+    image: 'https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=800&q=80'
   },
   // Rome Activities
   {
@@ -70,7 +70,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2.5,
     cost: 2200,
-    image: 'https://picsum.photos/seed/colosseum/800/600'
+    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a8',
@@ -80,7 +80,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 2800,
-    image: 'https://picsum.photos/seed/vatican/800/600'
+    image: 'https://images.unsplash.com/photo-1531572753322-ad011cafeeb1?auto=format&fit=crop&w=800&q=80'
   },
   // Bali Activities
   {
@@ -91,7 +91,7 @@ export const activities = [
     category: 'Nature',
     duration: 2,
     cost: 500,
-    image: 'https://picsum.photos/seed/monkey/800/600'
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a10',
@@ -101,7 +101,7 @@ export const activities = [
     category: 'Adventure',
     duration: 2,
     cost: 1500,
-    image: 'https://picsum.photos/seed/surfing/800/600'
+    image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80'
   },
   // Tokyo Activities
   {
@@ -112,7 +112,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1,
     cost: 0,
-    image: 'https://picsum.photos/seed/shibuya/800/600'
+    image: 'https://images.unsplash.com/photo-1542051812-82f5faa570a5?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'a12',
@@ -122,6 +122,6 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3000,
-    image: 'https://picsum.photos/seed/tsukiji/800/600'
+    image: 'https://images.unsplash.com/photo-1551108398-f2b7754f9a0c?auto=format&fit=crop&w=800&q=80'
   }
 ];

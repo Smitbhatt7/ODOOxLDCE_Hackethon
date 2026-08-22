@@ -13,7 +13,7 @@ export default function Login() {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
-
+  
   const { login } = useAppContext();
   const navigate = useNavigate();
 
@@ -35,13 +35,13 @@ export default function Login() {
       {/* Left side - Image */}
       <div className="hidden lg:block lg:w-1/2 relative">
         <div className="absolute inset-0 bg-slate-900/20 z-10" />
-        <img
-          src="https://picsum.photos/seed/travel/1600/900"
-          alt="Travel landscape"
+        <img 
+          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80" 
+          alt="Travel landscape" 
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute bottom-12 left-12 z-20 text-white">
-          <h1 className="text-5xl font-display font-bold mb-4">Discover the world,<br />design your journey.</h1>
+          <h1 className="text-5xl font-display font-bold mb-4">Discover the world,<br/>design your journey.</h1>
           <p className="text-xl opacity-90 font-light">Premium travel planning for the modern explorer.</p>
         </div>
       </div>
@@ -68,8 +68,8 @@ export default function Login() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">First Name</label>
-                      <input
-                        type="text"
+                      <input 
+                        type="text" 
                         value={firstName} onChange={(e) => setFirstName(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                         placeholder="John" required
@@ -77,8 +77,8 @@ export default function Login() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
-                      <input
-                        type="text"
+                      <input 
+                        type="text" 
                         value={lastName} onChange={(e) => setLastName(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                         placeholder="Doe" required
@@ -87,8 +87,8 @@ export default function Login() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-                    <input
-                      type="tel"
+                    <input 
+                      type="tel" 
                       value={phone} onChange={(e) => setPhone(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                       placeholder="+1 (555) 000-0000"
@@ -97,8 +97,8 @@ export default function Login() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">City</label>
-                      <input
-                        type="text"
+                      <input 
+                        type="text" 
                         value={city} onChange={(e) => setCity(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                         placeholder="New York"
@@ -106,8 +106,8 @@ export default function Login() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">Country</label>
-                      <input
-                        type="text"
+                      <input 
+                        type="text" 
                         value={country} onChange={(e) => setCountry(e.target.value)}
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                         placeholder="USA"
@@ -116,7 +116,7 @@ export default function Login() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-1">Additional Information</label>
-                    <textarea
+                    <textarea 
                       value={additionalInfo} onChange={(e) => setAdditionalInfo(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all min-h-[80px]"
                       placeholder="Tell us about your travel preferences..."
@@ -127,8 +127,8 @@ export default function Login() {
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-1">Email address</label>
-                <input
-                  type="email"
+                <input 
+                  type="email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
@@ -141,8 +141,8 @@ export default function Login() {
                   <label className="block text-sm font-medium text-slate-700">Password</label>
                   {isLogin && <a href="#" className="text-sm text-brand-600 hover:text-brand-700 font-medium">Forgot password?</a>}
                 </div>
-                <input
-                  type="password"
+                <input 
+                  type="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
@@ -160,14 +160,14 @@ export default function Login() {
             )}
 
             <div className="space-y-3">
-              <button
-                type="submit"
+              <button 
+                type="submit" 
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 transition-colors"
               >
                 {isLogin ? 'Sign in' : 'Register'}
               </button>
-              <button
-                type="button"
+              <button 
+                type="button" 
                 onClick={handleDemo}
                 className="w-full flex justify-center py-3 px-4 border border-slate-200 rounded-xl shadow-sm text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors"
               >
