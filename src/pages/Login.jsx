@@ -22,7 +22,7 @@ export default function Login() {
     if (loggedUser.role === 'admin') {
       navigate('/admin');
     } else {
-      navigate('/user/dashboard');
+      navigate('/dashboard');
     }
   };
 
