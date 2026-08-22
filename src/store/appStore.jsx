@@ -6,12 +6,12 @@ import { activities as initialActivities } from '../data/activities';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  // Force a database reset to load the new Wikipedia images
+  // Force a database reset to load the new Picsum images
   useEffect(() => {
-    const hasResetImages = localStorage.getItem('has_reset_images_wiki');
+    const hasResetImages = localStorage.getItem('has_reset_images_picsum');
     if (!hasResetImages) {
       localStorage.clear();
-      localStorage.setItem('has_reset_images_wiki', 'true');
+      localStorage.setItem('has_reset_images_picsum', 'true');
       window.location.reload();
     }
   }, []);
