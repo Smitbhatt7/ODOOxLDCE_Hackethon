@@ -33,3 +33,10 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 * \src/pages/\ - Main views (Dashboard, TripBuilder, CommunityHub, Admin, Profile, Login).
 * \src/components/\ - Reusable UI elements.
 * \src/data/\ - Seeded mock data.
+
+
+Globe Trotter-Contributors
+Vansh Trivedi
+Parva Vhora
+Smit Bhatt
+Aditya Pathak
