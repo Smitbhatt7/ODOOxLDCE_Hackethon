@@ -6,12 +6,12 @@ import { activities as initialActivities } from '../data/activities';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  // Force a database reset to load the new Picsum images
+  // Force a database reset to load the final local images
   useEffect(() => {
-    const hasResetImages = localStorage.getItem('has_reset_images_picsum');
+    const hasResetImages = localStorage.getItem('has_reset_images_local');
     if (!hasResetImages) {
       localStorage.clear();
-      localStorage.setItem('has_reset_images_picsum', 'true');
+      localStorage.setItem('has_reset_images_local', 'true');
       window.location.reload();
     }
   }, []);
