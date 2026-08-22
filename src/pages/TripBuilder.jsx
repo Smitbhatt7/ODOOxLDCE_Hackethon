@@ -28,10 +28,15 @@ export default function TripBuilder() {
   const handleAIGenerate = () => {
     setIsAIGenerating(true);
     setTimeout(() => {
+      const firstStopEnd = format(addDays(parseISO(trip.startDate), 3), 'yyyy-MM-dd');
+      const secondStopEnd = format(addDays(parseISO(firstStopEnd), 2), 'yyyy-MM-dd');
+      
       const generatedStops = [
         {
           id: Date.now().toString(),
           cityId: cities[0].id, // Paris
+          startDate: trip.startDate,
+          endDate: firstStopEnd,
           activities: [
             { ...activities.find(a => a.id === 'a1'), day: 1 },
             { ...activities.find(a => a.id === 'a2'), day: 2 }
@@ -40,6 +45,8 @@ export default function TripBuilder() {
         {
           id: (Date.now() + 1).toString(),
           cityId: cities[2].id, // Rome
+          startDate: firstStopEnd,
+          endDate: secondStopEnd,
           activities: [
             { ...activities.find(a => a.id === 'a7'), day: 1 }
           ]
@@ -296,10 +303,10 @@ export default function TripBuilder() {
                       return (
                         <div key={stop.id} className="relative">
                           {/* City Header */}
-                          <div className="sticky top-0 z-10 bg-slate-50/90 backdrop-blur-md py-4 border-b border-slate-200 mb-6">
-                            <h2 className="text-3xl font-display font-bold text-slate-900">{city?.name}</h2>
-                            <p className="text-brand-600 font-medium">
-                              {format(new Date(stop.startDate), 'MMMM do')} — {format(new Date(stop.endDate), 'MMMM do')}
+                          <div className="sticky top-0 z-10 bg-slate-50/90 dark:bg-slate-900/90 backdrop-blur-md py-4 border-b border-slate-200 dark:border-slate-700 mb-6 transition-colors">
+                            <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white">{city?.name}</h2>
+                            <p className="text-brand-600 dark:text-brand-400 font-medium">
+                              {stop.startDate ? format(new Date(stop.startDate), 'MMMM do') : 'TBD'} — {stop.endDate ? format(new Date(stop.endDate), 'MMMM do') : 'TBD'}
                             </p>
                           </div>
 
