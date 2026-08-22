@@ -26,15 +26,6 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 
 ---
 
-## 🌐 Production Deployment
-
-While this prototype is designed to run flawlessly on a local machine without external APIs, the application is fully static and production-ready. 
-
-Run 
-pm run build to generate the optimized static assets in the dist/ directory, which can be immediately hosted on Vercel, Netlify, or GitHub Pages.
-
----
-
 ## 📂 Project Architecture
 
 * \src/App.jsx\ - Core routing and layout wrappers.
