@@ -1,4 +1,4 @@
-﻿# GlobeTrotter - Travel Planning Application
+﻿# GlobeTrotter - Travel Planning Application:
 
 GlobeTrotter is a complete, visually spectacular, and fully interactive local prototype designed for modern travelers. It enables users to discover destinations, build detailed day-by-day itineraries, track budgets, visualize their journeys on a calendar, and share their travel plans with a vibrant community.
 
@@ -6,7 +6,7 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key Features:
 
 * **Premium UI/UX Design**: Sleek, modern interface tailored using a custom Tailwind CSS color palette (Slate, Brand Blue, and Accent Amber).
 * **Interactive Trip Builder**: A comprehensive workspace to build itineraries. Includes a chronological timeline of activities, a dedicated budget tracker, and a visual calendar representation.
@@ -16,7 +16,7 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack:
 
 * **Frontend**: React.js, Vite
 * **Styling**: Tailwind CSS v4, PostCSS
@@ -26,7 +26,7 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 
 ---
 
-## 📂 Project Architecture
+## 📂 Project Architecture:
 
 * \src/App.jsx\ - Core routing and layout wrappers.
 * \src/store/\ - Global state management.
