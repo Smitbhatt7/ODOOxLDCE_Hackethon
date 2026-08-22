@@ -8,7 +8,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2,
     cost: 2500,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/800px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg'
+    image: 'https://picsum.photos/id/1023/800/600'
   },
   {
     id: 'a2',
@@ -18,7 +18,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 1800,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/800px-Louvre_Museum_Wikimedia_Commons.jpg'
+    image: 'https://picsum.photos/id/1024/800/600'
   },
   {
     id: 'a3',
@@ -28,7 +28,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1500,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Bercy%2C_Paris_01.jpg/800px-Bercy%2C_Paris_01.jpg'
+    image: 'https://picsum.photos/id/1025/800/600'
   },
   {
     id: 'a4',
@@ -38,7 +38,7 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3500,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Brooklyn_Museum_-_Monk_Testing_Wine_-_Antonio_Casanova_y_Estorach.jpg/800px-Brooklyn_Museum_-_Monk_Testing_Wine_-_Antonio_Casanova_y_Estorach.jpg'
+    image: 'https://picsum.photos/id/1026/800/600'
   },
   // Amsterdam Activities
   {
@@ -49,7 +49,7 @@ export const activities = [
     category: 'Culture',
     duration: 2,
     cost: 2000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Van_Gogh_Museum_Amsterdam.jpg/800px-Van_Gogh_Museum_Amsterdam.jpg'
+    image: 'https://picsum.photos/id/1027/800/600'
   },
   {
     id: 'a6',
@@ -59,7 +59,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1600,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg/800px-KeizersgrachtReguliersgrachtAmsterdam.jpg'
+    image: 'https://picsum.photos/id/1028/800/600'
   },
   // Rome Activities
   {
@@ -70,7 +70,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2.5,
     cost: 2200,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/800px-Colosseo_2020.jpg'
+    image: 'https://picsum.photos/id/1029/800/600'
   },
   {
     id: 'a8',
@@ -80,7 +80,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 2800,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vatican_Museums_Spiral_Staircase_2012.jpg/800px-Vatican_Museums_Spiral_Staircase_2012.jpg'
+    image: 'https://picsum.photos/id/1031/800/600'
   },
   // Bali Activities
   {
@@ -91,7 +91,7 @@ export const activities = [
     category: 'Nature',
     duration: 2,
     cost: 500,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Macaca_fascicularis_-_Ubud_Monkey_Forest_2.jpg/800px-Macaca_fascicularis_-_Ubud_Monkey_Forest_2.jpg'
+    image: 'https://picsum.photos/id/1032/800/600'
   },
   {
     id: 'a10',
@@ -101,7 +101,7 @@ export const activities = [
     category: 'Adventure',
     duration: 2,
     cost: 1500,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mavericks_Surf_Contest_2010b.jpg/800px-Mavericks_Surf_Contest_2010b.jpg'
+    image: 'https://picsum.photos/id/1033/800/600'
   },
   // Tokyo Activities
   {
@@ -112,7 +112,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1,
     cost: 0,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Shibuya_Crossing%2C_Tokyo%2C_Japan_%2843460670072%29.jpg/800px-Shibuya_Crossing%2C_Tokyo%2C_Japan_%2843460670072%29.jpg'
+    image: 'https://picsum.photos/id/1035/800/600'
   },
   {
     id: 'a12',
@@ -122,6 +122,6 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3000,
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Tsukiji_Fish_Market_2.jpg/800px-Tsukiji_Fish_Market_2.jpg'
+    image: 'https://picsum.photos/id/1036/800/600'
   }
 ];
