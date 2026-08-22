@@ -8,7 +8,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2,
     cost: 2500,
-    image: 'https://picsum.photos/id/1023/800/600'
+    image: '/images/paris.jpg'
   },
   {
     id: 'a2',
@@ -18,7 +18,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 1800,
-    image: 'https://picsum.photos/id/1024/800/600'
+    image: '/images/paris.jpg'
   },
   {
     id: 'a3',
@@ -28,7 +28,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1500,
-    image: 'https://picsum.photos/id/1025/800/600'
+    image: '/images/paris.jpg'
   },
   {
     id: 'a4',
@@ -38,7 +38,7 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3500,
-    image: 'https://picsum.photos/id/1026/800/600'
+    image: '/images/paris.jpg'
   },
   // Amsterdam Activities
   {
@@ -49,7 +49,7 @@ export const activities = [
     category: 'Culture',
     duration: 2,
     cost: 2000,
-    image: 'https://picsum.photos/id/1027/800/600'
+    image: '/images/amsterdam.jpg'
   },
   {
     id: 'a6',
@@ -59,7 +59,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1.5,
     cost: 1600,
-    image: 'https://picsum.photos/id/1028/800/600'
+    image: '/images/amsterdam.jpg'
   },
   // Rome Activities
   {
@@ -70,7 +70,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 2.5,
     cost: 2200,
-    image: 'https://picsum.photos/id/1029/800/600'
+    image: '/images/rome.jpg'
   },
   {
     id: 'a8',
@@ -80,7 +80,7 @@ export const activities = [
     category: 'Culture',
     duration: 3,
     cost: 2800,
-    image: 'https://picsum.photos/id/1031/800/600'
+    image: '/images/rome.jpg'
   },
   // Bali Activities
   {
@@ -91,7 +91,7 @@ export const activities = [
     category: 'Nature',
     duration: 2,
     cost: 500,
-    image: 'https://picsum.photos/id/1032/800/600'
+    image: '/images/bali.jpg'
   },
   {
     id: 'a10',
@@ -101,7 +101,7 @@ export const activities = [
     category: 'Adventure',
     duration: 2,
     cost: 1500,
-    image: 'https://picsum.photos/id/1033/800/600'
+    image: '/images/bali.jpg'
   },
   // Tokyo Activities
   {
@@ -112,7 +112,7 @@ export const activities = [
     category: 'Sightseeing',
     duration: 1,
     cost: 0,
-    image: 'https://picsum.photos/id/1035/800/600'
+    image: '/images/tokyo.jpg'
   },
   {
     id: 'a12',
@@ -122,6 +122,6 @@ export const activities = [
     category: 'Food',
     duration: 2,
     cost: 3000,
-    image: 'https://picsum.photos/id/1036/800/600'
+    image: '/images/tokyo.jpg'
   }
 ];

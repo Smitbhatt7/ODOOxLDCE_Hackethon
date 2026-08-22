@@ -5,7 +5,7 @@ export const cities = [
     country: 'France',
     region: 'Europe',
     description: 'The City of Light draws millions of visitors every year with its unforgettable ambiance.',
-    image: 'https://picsum.photos/id/1015/800/600',
+    image: '/images/paris.jpg',
     costIndex: 'Expensive',
     popularity: 98
   },
@@ -15,7 +15,7 @@ export const cities = [
     country: 'Netherlands',
     region: 'Europe',
     description: 'Known for its artistic heritage, elaborate canal system and narrow houses.',
-    image: 'https://picsum.photos/id/1016/800/600',
+    image: '/images/amsterdam.jpg',
     costIndex: 'Expensive',
     popularity: 92
   },
@@ -25,7 +25,7 @@ export const cities = [
     country: 'Italy',
     region: 'Europe',
     description: 'Capital of Italy, is a sprawling, cosmopolitan city with nearly 3,000 years of globally influential art, architecture and culture.',
-    image: 'https://picsum.photos/id/1018/800/600',
+    image: '/images/rome.jpg',
     costIndex: 'Moderate',
     popularity: 95
   },
@@ -35,7 +35,7 @@ export const cities = [
     country: 'Spain',
     region: 'Europe',
     description: 'The cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture.',
-    image: 'https://picsum.photos/id/1019/800/600',
+    image: '/images/barcelona.jpg',
     costIndex: 'Moderate',
     popularity: 94
   },
@@ -45,7 +45,7 @@ export const cities = [
     country: 'Japan',
     region: 'Asia',
     description: 'Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.',
-    image: 'https://picsum.photos/id/1020/800/600',
+    image: '/images/tokyo.jpg',
     costIndex: 'Expensive',
     popularity: 97
   },
@@ -55,7 +55,7 @@ export const cities = [
     country: 'Japan',
     region: 'Asia',
     description: 'Once the capital of Japan, is a city on the island of Honshu.',
-    image: 'https://picsum.photos/id/1021/800/600',
+    image: '/images/kyoto.jpg',
     costIndex: 'Moderate',
     popularity: 93
   },
@@ -65,7 +65,7 @@ export const cities = [
     country: 'Indonesia',
     region: 'Asia',
     description: 'An Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs.',
-    image: 'https://picsum.photos/id/1022/800/600',
+    image: '/images/bali.jpg',
     costIndex: 'Cheap',
     popularity: 96
   }
