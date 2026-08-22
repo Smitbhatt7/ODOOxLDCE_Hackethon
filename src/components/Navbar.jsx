@@ -8,15 +8,22 @@ export default function Navbar() {
   const { user } = useAppContext();
   const location = useLocation();
   const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.documentElement.classList.add('dark');
+      return true;
+    }
     return document.documentElement.classList.contains('dark');
   });
 
   const toggleDarkMode = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
       setIsDarkMode(false);
     } else {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
       setIsDarkMode(true);
     }
   };
