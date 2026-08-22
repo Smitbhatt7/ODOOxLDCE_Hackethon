@@ -36,7 +36,7 @@ GlobeTrotter is a complete, visually spectacular, and fully interactive local pr
 
 
 Globe Trotter-Contributors
-Vansh Trivedi
-Parva Vhora
-Smit Bhatt
-Aditya Pathak
+*Vansh Trivedi
+*Parva Vhora
+*Smit Bhatt
+*Aditya Pathak
